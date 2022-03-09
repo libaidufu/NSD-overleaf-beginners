@@ -1,0 +1,40 @@
+
+\documentclass{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\listoftables
+\clearpage
+
+Table \ref{Summary} shows XXX
+
+Table \ref{Baseline} shows the baseline result.
+
+
+\begin{table}[]
+\begin{tabular}{lllll}
+ 1& 2 &  &  &  \\
+ &  &  &  &  \\
+ &  &  &  &  \\
+ &  &  &  & 
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c| c| c| }
+         \hline
+         cell1 & cell2 & cell3 \\ 
+         \hline
+         cell4 & cell5 & cell6 \\  
+         \hline
+         cell7 & cell8 & cell9   \\
+         \hline
+    \end{tabular}
+    \caption{Baseline}
+    \label{Baseline}
+\end{table}
+
+
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{adjustbox,multicol,multirow,threeparttable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% 简单表格
+\begin{center}
+    \begin{tabular}{|c|c|}
+        A & B \\
+        C & D
+    \end{tabular}
+\end{center}
+
+% 复杂表格
+\begin{table}
+\caption{Robustness Checks for the Effects of Stabilization Policies}
+\label{table:robust_stab}
+\begin{center}
+\resizebox{1.2\textwidth}{!}{%
+\begin{threeparttable}
+\begin{tabular}{lccccccccc}
+\hline
+\multicolumn{10}{l}{\textit{Panel A. Effects of social security policies}} \\
+                         & \multicolumn{3}{c}{Cash $<$ 1 Month}        & \multicolumn{3}{c}{Reopen}        & \multicolumn{3}{c}{Reopen $<$ 1 Month} \\
+                         & (1)       & (2)        & (3)            & (4)       & (5)        & (6)            & (7)         & (8)          & (9)      \\
+
+Social Security Deferral & -0.047*   & -0.049*    & -0.053*        & 0.073**   & 0.093***   & 0.086**        & 0.106***    & 0.086**      & 0.117***                  \\
+                         & (0.027)   & (0.027)    & (0.029)        & (0.030)   & (0.032)    & (0.035)        & (0.034)     & (0.041)      & (0.038)                   \\
+Observations             & 1,466     & 1,433      & 1,466          & 1,861     & 1,806      & 1,861          & 1,504       & 1,460        & 1,504                     \\
+R-Squared                & 0.030     & 0.020      & 0.016          & 0.035     & 0.042      & 0.030          & 0.067       & 0.064        & 0.064                     \\
+Additional Controls      & Wuhan + Hubei  & Economic  & Policy Intensity  & Wuhan + Hubei  & Economic  & Policy Intensity  & Wuhan + Hubei  & Economic   & Policy Intensity            \\ \hline
+
+\hline
+\multicolumn{10}{l}{\textit{Panel B. Effects of credit guarantee policies}} \\
+                 & \multicolumn{3}{c}{Cash $<$ 1 Month}        & \multicolumn{3}{c}{Reopen}        & \multicolumn{3}{c}{Reopen $<$ 1 Month} \\
+                 & (1)     & (2)        & (3)            & (4)      & (5)       & (6)            & (7)      & (8)        & (9)      \\
+Credit Guarantee & 0.030   & 0.018      & 0.035          & 0.019    & -0.054    & 0.076          & 0.018    & -0.001      & -0.001                    \\
+                 & (0.022) & (0.025)    & (0.023)        & (0.041)  & (0.040)   & (0.043)        & (0.042)  & (0.046)     & (0.044)                   \\
+Observations     & 1,466   & 1,433      & 1,466          & 1,861    & 1,806     & 1,861          & 1,504    & 1,460       & 1,504                     \\
+R-Squared        & 0.028   & 0.018      & 0.018          & 0.028    & 0.033     & 0.023          & 0.056    & 0.059       & 0.057                     \\
+Additional Controls        & Wuhan + Hubei  & Economic  & Policy Intensity    & Wuhan + Hubei  & Economic   & Policy Intensity      & Wuhan + Hubei  & Economic    & Policy Intensity            \\ \hline
+
+\hline
+\multicolumn{10}{l}{\textit{Panel C. Effects of rent reduction policies}} \\
+               & \multicolumn{3}{c}{Cash $<$ 1 Month}        & \multicolumn{3}{c}{Reopen}        & \multicolumn{3}{c}{Reopen $<$ 1 Month} \\
+               & (1)       & (2)        & (3)            & (4)       & (5)        & (6)            & (7)      & (8)      & (9)                 \\
+Rent Reduction & -0.116** & -0.133**    & -0.151**       & 0.035    & -0.017      & -0.033         & -0.012   & -0.062     & -0.084              \\
+               & (0.055)  & (0.057)     & (0.062)        & (0.069)  & (0.073)     & (0.069)        & (0.060)  & (0.097)    & (0.075)             \\
+Observations   & 255      & 251            & 255         & 305      & 301         & 305            & 244      & 240        & 244                 \\
+R-Squared      & 0.060    & 0.056         & 0.058        & 0.051    & 0.098       & 0.068          & 0.099    & 0.079      & 0.088               \\
+Additional Controls      & Wuhan + Hubei  & Economic     & Policy Intensity    & Wuhan + Hubei  & Economic  & Policy Intensity  & Wuhan + Hubei  & Economic  & Policy Intensity   \\ \hline
+
+\hline
+\multicolumn{10}{l}{\textit{Panel D. Effects of loan support policies}} \\
+             & \multicolumn{3}{c}{Cash $<$ 1 Month}        & \multicolumn{3}{c}{Reopen}        & \multicolumn{3}{c}{Reopen $<$ 1 Month} \\
+             & (1)       & (2)        & (3)            & (4)       & (5)        & (6)            & (7)       & (8)       & (9)      \\
+Loan Support & -0.009    & -0.024     & -0.011         & 0.014     & 0.002      & -0.027         & 0.028   & -0.013       & -0.015                    \\
+             & (0.033)   & (0.026)    & (0.028)        & (0.036)   & (0.040)    & (0.046)        & (0.043) & (0.035)     & (0.045)                   \\
+Observations & 1,433     & 1,466      & 1,466          & 1,806     & 1,861      & 1,861          & 1,504   & 1,460       & 1,504                     \\
+R-Squared    & 0.018     & 0.028      & 0.014          & 0.033     & 0.027      & 0.025          & 0.056   & 0.059       & 0.057                     \\
+Additional Controls      & Wuhan + Hubei  & Economic   & Policy Intensity   & Wuhan + Hubei   & Economic   & Policy Intensity    & Wuhan + Hubei  & Economic  & Policy Intensity            \\ \hline
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\item \small \textit{Notes}: This table reports robustness checks of the effects of stabilization policies on firms' short-term cash flow, reopening decision and expectations to reopen within one month. Columns 1, 4 and 7 include geographical distance to Wuhan and industry dependence on Hubei Province. Columns 2, 5 and 8 include city level GDP per capita and ratio of fiscal expenditure to fiscal revenue. Columns 3, 6 and 9 include the number of of other stabilization policies enacted at the city level. All regressions control for SMEs' basic characteristics (sales, employment, age, and service-sector fixed effect) and city-level infection rates of COVID-19. Robust standard errors are clustered at city level. *** $p<0.01$, ** $p<0.05$, * $p<0.1$. 
+
+\end{tablenotes}
+\end{threeparttable}
+}
+\end{center}
+\end{table}
+
+\end{document}

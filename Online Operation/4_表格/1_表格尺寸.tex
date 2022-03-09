@@ -1,0 +1,23 @@
+
+\documentclass{article}
+\usepackage{adjustbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        A & B \\
+        C & D
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \resizebox{0.6\textwidth}{!}{%
+        \begin{tabular}{|c|c|}
+            A & B \\
+            C & D
+        \end{tabular}
+        }
+\end{center}
+
+\end{document}
